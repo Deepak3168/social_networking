@@ -24,7 +24,7 @@ To run the Social Networking API locally, follow these steps:
    docker-compose up
    ```
 
-   The API will be accessible at `http://0.0.0.0:8000`.
+   The API will be accessible at `http://127.0.0.1:8000`.
 
 ## Testing
 
