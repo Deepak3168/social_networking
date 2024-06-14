@@ -54,4 +54,8 @@ To run tests for the Social Networking API:
 
 For quick access and testing of API endpoints, you can import the Postman collection using the following link:
 
+https://drive.google.com/file/d/1oeOAbG5zJX81GQUglCXDNyC0r-BIn_rM/view?usp=sharing
+
+
+
 
