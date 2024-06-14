@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Social Networking API enables users to connect and interact through various functionalities including user authentication, friend management, and more.
+The Social Networking API enables users to connect and interact through various functionalities including user authentication, friend management.
 
 ## Installation
 
