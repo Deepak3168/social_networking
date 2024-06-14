@@ -13,7 +13,7 @@ To run the Social Networking API locally, follow these steps:
 
    ```bash
    git clone https://github.com/Deepak3168/social_networking.git
-   cd social-networking
+   cd social_networking
    ```
 
 2. **Start the Application:**
