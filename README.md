@@ -7,6 +7,9 @@ The Social Networking API enables users to connect and interact through various 
 
 ## Installation
 
+### Prerequisites
+- Docker installed and Docker service running.
+
 To run the Social Networking API locally, follow these steps:
 
 1. **Clone the Repository:**
