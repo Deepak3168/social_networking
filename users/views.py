@@ -13,7 +13,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-# view for registering users
+
 class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -41,7 +41,7 @@ class UserSearchView(generics.ListAPIView):
         query = self.request.query_params.get('q', '')
         return User.objects.filter(
             Q(email__iexact=query) | Q(name__icontains=query)
-        ).distinct().order_by('id')  # Ensure ordering here
+        ).distinct().order_by('id') 
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()

@@ -11,7 +11,6 @@ class AuthenticationTest(TestCase):
         self.client = APIClient()
         self.users = []
 
-        # Create 10 users
         for i in range(1, 18):
             user = User.objects.create_user(
                 name=f'testuser{i}',
@@ -20,10 +19,9 @@ class AuthenticationTest(TestCase):
             )
             self.users.append(user)
 
-        # URL for user login
-        self.login_url = reverse('token_obtain_pair')  # Adjust this to your actual login URL name
+        self.login_url = reverse('token_obtain_pair')  
 
-        # Login testuser1
+
         response = self.client.post(self.login_url, {
             'email': 'test1@user.com',
             'password': 'testuser1'
@@ -34,16 +32,18 @@ class AuthenticationTest(TestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
     def test_search_by_email(self):
-        search_url = reverse('user-search')  # Adjust this to your actual search URL name
+        search_url = reverse('user-search')  
         response = self.client.get(search_url, {'q': 'test2@user.com'}, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        print("TEST SEARCH BY EMAIL-PASSED")
         print(response.data)
         self.assertEqual(len(response.data['results']), 1)
         self.assertEqual(response.data['results'][0]['email'], 'test2@user.com')
 
     def test_search_by_name_fragment(self):
-        search_url = reverse('user-search')  # Adjust this to your actual search URL name
+        search_url = reverse('user-search') 
         response = self.client.get(search_url, {'q': 'testuser'}, format='json')
+        print("TEST SEARCH BY NAME-PASSED")
         print(response.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data['results']), 10)
