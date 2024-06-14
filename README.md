@@ -45,9 +45,9 @@ To run tests for the Social Networking API:
    Execute the following commands to test the Friend model functionalities:
 
    ```bash
-   docker-compose exec web python manage.py test friends.FriendRequestTests
-   docker-compose exec web python manage.py test friends.FriendRequestsTests
-   docker-compose exec web python manage.py test friends.FriendRequestRateLimitTests
+   docker-compose exec web python manage.py test tests.friends.FriendRequestTests
+   docker-compose exec web python manage.py test tests.friends.FriendRequestsTests
+   docker-compose exec web python manage.py test tests.friends.FriendRequestRateLimitTests
    ```
 
 ## Postman Collection
